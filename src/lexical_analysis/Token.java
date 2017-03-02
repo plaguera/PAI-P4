@@ -7,10 +7,6 @@ public class Token {
 	private int line;
 	private int column;
 	
-	public Token(){
-		this("", "", -1, -1);
-	}
-	
 	public Token(String name_p, String lexema_p, int line_p, int column_p){
 		name = name_p;
 		lexema = lexema_p;
@@ -18,7 +14,11 @@ public class Token {
 		column = column_p;
 	}
 	
-	/*public String getName(){
+	public Token(){
+		this("", "", -1, -1);
+	}
+	
+	public String getName(){
 		return name;
 	}
 	
@@ -32,14 +32,10 @@ public class Token {
 	
 	public int getColumn(){
 		return column;
-	}*/
+	}
 	
 	public String toString(){
-		return line + " " + column + " " + name + " " + lexema; // return hola;
-	}
-	public int fun(int a,char b,int c){
-		System.out.println("HOLA MUNDO");
-		return fun(a++,b--,32-24503);
+		return line + "\t" + column + "\t" + name + "\t" + lexema;
 	}
 	
 }
